@@ -9,17 +9,28 @@
 </div>
 
 <body>
+    <div class="turkeyVideo">
+        <center><iframe width="733" height="538" src="https://www.youtube.com/embed/Dyxr--0hHWU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+    </div>
+
+    <br/>
+
     <form method="post" asp-page="Index">
         <section class="weight">
-            <label for="weight">How much does the turkey weigh?</label>
-            <input type="text" name="weight" id="weight">
+            <center><input type="text" name="weight" placeholder="How many pounds is the turkey?" size="100"></center>
         </section>
+        <br/>
         <section class="submission">
-            <input type="submit" value="Submit" asp-page-handler="Submit">
+            <center><input class="submissionbutton" type="submit" value="🦃" asp-page-handler="Submit" ></center>
         </section>
     </form>
 
+    <br/>
+
     <section class="recipe">
-        <span style="white-space: pre-line">@Model.SubmissionResult</span>
+
+        <!-- This solution came from https://stackoverflow.com/a/7602751/13741035 -->
+
+        <center><h2 style="white-space: pre-line">@Model.SubmissionResult</h2></center>
     </section>
 </body>
