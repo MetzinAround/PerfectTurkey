@@ -1,0 +1,25 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Let's Cook that Turkey</h1>
+</div>
+
+<body>
+    <form method="post" asp-page="Index">
+        <section class="weight">
+            <label for="weight">How much does the turkey weigh?</label>
+            <input type="text" name="weight" id="weight">
+        </section>
+        <section class="submission">
+            <input type="submit" value="Submit" asp-page-handler="Submit">
+        </section>
+    </form>
+
+    <section class="recipe">
+        <span style="white-space: pre-line">@Model.SubmissionResult</span>
+    </section>
+</body>
